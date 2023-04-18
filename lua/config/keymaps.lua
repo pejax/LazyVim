@@ -19,6 +19,10 @@ end
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
+-- Mini Starter
+map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
+map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Mini Starter" })
+
 -- Colorschem Picker
 map("n", "<F2>", ":ColorSchemePick<cr>")
 
