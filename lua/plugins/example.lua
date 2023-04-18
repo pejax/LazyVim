@@ -3,15 +3,23 @@
 if true then return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
+  -- add neovim-ayu
   { "Shatur/neovim-ayu" },
+  -- add monokai
   { "tanvirtin/monokai.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load monokai
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "monokai",
     },
+  },
+
+  -- Load Markdown Preview
+  -- Run in plugin folder: yarn install
+  {
+    "iamcco/markdown-preview.nvim",
   },
 } end
 

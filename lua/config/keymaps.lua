@@ -16,3 +16,4 @@ local function map(mode, lhs, rhs, opts)
 end
 
 map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
+map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
