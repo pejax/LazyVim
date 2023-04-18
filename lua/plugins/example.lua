@@ -31,7 +31,8 @@ if true then return {
     end,
   },
 
-  -- Starter Page
+  -- Use mini.starter instead of alpha
+  { import = "lazyvim.plugins.extras.ui.mini-starter" },
   {
     "echasnovski/mini.starter",
     version = false, -- wait till new 0.7.0 release to put it back on semver
@@ -308,9 +309,6 @@ return {
       }
     end,
   },
-
-  -- use mini.starter instead of alpha
-  { import = "lazyvim.plugins.extras.ui.mini-starter" },
 
   -- add jsonls and schemastore ans setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
