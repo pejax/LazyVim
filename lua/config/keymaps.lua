@@ -17,3 +17,12 @@ end
 
 map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
 map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+
+-- What a stupid idea to map core neovim keys
+vim.keymap.del("", "<S-h>")
+vim.keymap.del("", "<S-l>")
+-- Leap
+vim.keymap.del("", "<s>")
+vim.keymap.del("", "<S-s>")
+vim.keymap.del("", "<x>")
+vim.keymap.del("", "<S-x>")
