@@ -15,9 +15,16 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
-map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
-map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
-
 -- What a stupid idea to map core neovim keys
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
+
+-- JSON formatter
+map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
+
+-- Markdown Preview
+map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+
+-- Dash
+map("n", "<leader>d", "<Plug>DashSearch<cr>", { desc = "Dash search" })
+map("n", "<leader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash global search" })

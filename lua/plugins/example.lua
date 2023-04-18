@@ -63,6 +63,9 @@ if true then return {
       },
     },
   },
+  {
+    "rizzatti/dash.vim",
+  },
 } end
 
 -- every spec file under config.plugins will be loaded automatically by lazy.nvim
