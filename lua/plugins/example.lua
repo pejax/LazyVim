@@ -104,9 +104,8 @@ if true then return {
       })
     end,
   },
-  --
-  -- Load Markdown Preview
-  -- Run in plugin folder: yarn install
+
+  -- Load Markdown Preview (run 'yarn install' in plugin folder
   {
     "iamcco/markdown-preview.nvim",
   },
