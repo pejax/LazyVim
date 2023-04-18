@@ -1,19 +1,34 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
 if true then return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-  -- add neovim-ayu
-  { "Shatur/neovim-ayu" },
-  -- add monokai
-  { "tanvirtin/monokai.nvim" },
 
-  -- Configure LazyVim to load monokai
+  -- Add Colorschemes
+  {
+    "pejax/vim-colorschemes",
+    url = "git@github.com:pejax/vim-colorschemes"
+  },
+
+  -- Add Color Picker
+  {
+    "pejax/colorscheme-picker.nvim",
+    url = "git@github.com:pejax/colorscheme-picker.nvim",
+    opts = {
+      env_file = ".env-overrides",
+      excludes = { "delek", "morning", "peachpuff", "ron", "shine", "zellner" },
+      default_key_map = false,
+    }
+  },
+
+  -- Configure LazyVim to load nvim_colorscheme from environment
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "monokai",
-    },
+    opts = {},
+    init = function(plug)
+      local nvim_colorscheme = os.getenv("NVIM_COLORSCHEME")
+      if nvim_colorscheme and nvim_colorscheme ~= "" then
+        plug.opts.colorscheme = nvim_colorscheme
+      end
+    end,
   },
 
   -- Starter Page
