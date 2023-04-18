@@ -21,6 +21,48 @@ if true then return {
   {
     "iamcco/markdown-preview.nvim",
   },
+
+  -- Fix stupid Leap key bindings
+  {
+   "ggandor/leap.nvim",
+    keys = function()
+    return {
+      { "<leader>sl", "<Plug>(leap-forward-to)", desc = "Leap forward to"},
+      { "<leader>sL", "<Plug>(leap-backward-to)", desc = "Leap backward to"},
+      { "<leader>sx", "<Plug>(leap-forward-till)", desc = "Leap forward till"},
+      { "<leader>sX", "<Plug>(leap-backward-till)", desc = "Leap backward till"},
+    }
+    end,
+  },
+
+  -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
+  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
+  { import = "lazyvim.plugins.extras.lang.typescript" },
+
+  -- add more treesitter parsers
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        --"help",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "scala",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+      },
+    },
+  },
 } end
 
 -- every spec file under config.plugins will be loaded automatically by lazy.nvim
@@ -138,34 +180,6 @@ return {
         end,
         -- Specify * to use this function as a fallback for any server
         -- ["*"] = function(server, opts) end,
-      },
-    },
-  },
-
-  -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
-  -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-
-  -- add more treesitter parsers
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
-        "help",
-        "html",
-        "javascript",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
       },
     },
   },

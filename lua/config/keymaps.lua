@@ -21,8 +21,3 @@ map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Prev
 -- What a stupid idea to map core neovim keys
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
--- Leap
-vim.keymap.del("", "<s>")
-vim.keymap.del("", "<S-s>")
-vim.keymap.del("", "<x>")
-vim.keymap.del("", "<S-x>")
