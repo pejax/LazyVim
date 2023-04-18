@@ -64,7 +64,7 @@ if true then return {
           new_section("motd",         "e $HOME/.motd",        "Config"),
           new_section("shellrc",      "e $HOME/.shellrc",     "Config"),
           new_section("vimrc",        "e $HOME/.vimrc",       "Config"),
-          new_section("zshrc",        "e $HOME/zshrc",        "Config"),
+          new_section("zshrc",        "e $HOME/.zshrc",       "Config"),
           new_section("Recent files", "Telescope oldfiles",   "Telescope"),
           new_section("Grep text",    "Telescope live_grep",  "Telescope"),
           new_section("New file",     "ene | startinsert",    "Built-in"),
