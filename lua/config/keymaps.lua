@@ -15,11 +15,14 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- What a stupid idea to map core neovim keys
+-- What a stupid idea to map core neovim motion keys
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
--- JSON formatter
+-- Colorschem Picker
+map("n", "<F2>", ":ColorSchemePick<cr>")
+
+-- Python JSON formatter
 map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
 
 -- Markdown Preview
