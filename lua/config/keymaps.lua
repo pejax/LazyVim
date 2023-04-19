@@ -1,3 +1,13 @@
+-----------------------------------------------------------
+--  _
+-- | | __ ___  _   _  _ __ ___    __ _  _ __   ___
+-- | |/ // _ \| | | || '_ ` _ \  / _` || '_ \ / __|
+-- |   <|  __/| |_| || | | | | || (_| || |_) |\__ \
+-- |_|\_\\___| \__, ||_| |_| |_| \__,_|| .__/ |___/
+--             |___/                   |_|
+--
+-----------------------------------------------------------
+
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
