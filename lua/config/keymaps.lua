@@ -37,6 +37,9 @@ map("n", "<leader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear Shada Marks" }
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
+-- Telescope
+map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
+
 -- Colorschem Picker
 map("n", "<F2>", ":ColorSchemePick<cr>")
 
