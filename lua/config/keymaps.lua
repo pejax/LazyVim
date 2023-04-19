@@ -31,11 +31,11 @@ vim.keymap.del("", "<S-l>")
 
 -- Wipe registers
 map("n", "<leader>r", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
-map("n", "<leader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear shada marks" })
+map("n", "<leader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear Shada Marks" })
 
 -- Mini Starter
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
-map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Mini Starter" })
+map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
 -- Colorschem Picker
 map("n", "<F2>", ":ColorSchemePick<cr>")
@@ -47,5 +47,5 @@ map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
 map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
 
 -- Dash
-map("n", "<leader>d", "<Plug>DashSearch<cr>", { desc = "Dash search" })
-map("n", "<leader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash global search" })
+map("n", "<leader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
+map("n", "<leader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
