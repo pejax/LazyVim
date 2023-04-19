@@ -84,6 +84,14 @@ if true then return {
     "iamcco/markdown-preview.nvim",
   },
 
+  -- Manage marks in gutter
+  {
+    "chentoast/marks.nvim",
+    init = function(_)
+      require('marks').setup({})
+    end
+  },
+
   -- Fix stupid Leap key bindings
   {
    "ggandor/leap.nvim",
@@ -107,7 +115,6 @@ if true then return {
     opts = {
       ensure_installed = {
         "bash",
-        --"help",
         "html",
         "javascript",
         "json",
