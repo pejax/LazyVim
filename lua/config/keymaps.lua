@@ -29,6 +29,10 @@ end
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
+-- Wipe registers
+map("n", "<leader>r", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
+map("n", "<leader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear shada marks" })
+
 -- Mini Starter
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Mini Starter" })
