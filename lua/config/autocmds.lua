@@ -16,4 +16,8 @@ vim.cmd([[
   endfunction
 
   autocmd BufWritePre * :call TrimWhitespace()
+  autocmd bufnewfile *.sh 0r ${DOTFILES}/shell/template.sh
+  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+  command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 ]])
