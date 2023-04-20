@@ -97,10 +97,10 @@ if true then return {
    "ggandor/leap.nvim",
     keys = function()
     return {
-      { "<leader>sl", "<Plug>(leap-forward-to)", desc = "Leap forward to"},
-      { "<leader>sL", "<Plug>(leap-backward-to)", desc = "Leap backward to"},
-      { "<leader>sx", "<Plug>(leap-forward-till)", desc = "Leap forward till"},
-      { "<leader>sX", "<Plug>(leap-backward-till)", desc = "Leap backward till"},
+      { "<localleader>sl", "<Plug>(leap-forward-to)", desc = "Leap forward to"},
+      { "<localleader>sL", "<Plug>(leap-backward-to)", desc = "Leap backward to"},
+      { "<localleader>sx", "<Plug>(leap-forward-till)", desc = "Leap forward till"},
+      { "<localleader>sX", "<Plug>(leap-backward-till)", desc = "Leap backward till"},
     }
     end,
   },

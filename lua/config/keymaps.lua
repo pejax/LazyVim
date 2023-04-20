@@ -30,25 +30,26 @@ vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
 -- Wipe registers
-map("n", "<leader>r", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
-map("n", "<leader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear Shada Marks" })
-
--- Mini Starter
-map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
-map("n", "<leader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
+map("n", "<localleader>r", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
+map("n", "<localleader>R", "<cmd>ClearShadaMarks<cr>", { desc = "Clear Shada Marks" })
 
 -- Telescope
 map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
 
+-- Mini Starter
+map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
+map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
+
 -- Colorschem Picker
 map("n", "<F2>", ":ColorSchemePick<cr>")
+map("n", "<localleader>c", ":ColorSchemePick<cr>", { desc = "Color Scheme Picker" })
 
 -- Python JSON formatter
 map("n", "<C-j>", ":%!python3 -m json.tool<cr>")
 
 -- Markdown Preview
-map("n", "<leader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
 
 -- Dash
-map("n", "<leader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
-map("n", "<leader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
+map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
+map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
