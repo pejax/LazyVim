@@ -30,8 +30,8 @@ vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
 -- Wipe registers
-map("n", "<localleader>x", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
-map("n", "<localleader>X", "<cmd>ClearShadaMarks<cr>", { desc = "Clear Shada Marks" })
+map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
+map("n", "<localleader>W", "<cmd>ClearShadaMarks<cr>", { desc = "Wipe Shada Marks" })
 map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
 
 -- Telescope
