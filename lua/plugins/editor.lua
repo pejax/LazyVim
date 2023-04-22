@@ -28,10 +28,10 @@ return {
     --    },
     keys = function()
       return {
-        { "<localleader>f", "<Plug>(leap-forward-to)", desc = "Leap forward to" },
-        { "<localleader>F", "<Plug>(leap-backward-to)", desc = "Leap backward to" },
-        { "<localleader>b", "<Plug>(leap-forward-till)", desc = "Leap forward till" },
-        { "<localleader>B", "<Plug>(leap-backward-till)", desc = "Leap backward till" },
+        { "<localleader>l", "<Plug>(leap-forward-to)", desc = "Leap forward to" },
+        { "<localleader>L", "<Plug>(leap-backward-to)", desc = "Leap backward to" },
+        { "<localleader>x", "<Plug>(leap-forward-till)", desc = "Leap forward till" },
+        { "<localleader>X", "<Plug>(leap-backward-till)", desc = "Leap backward till" },
       }
     end,
   },
