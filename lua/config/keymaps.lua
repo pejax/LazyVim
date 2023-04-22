@@ -29,6 +29,9 @@ end
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
+-- Disable builtin colorscheme picker
+--vim.keymap.del("", "<leader>uC")
+
 -- Wipe registers
 map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
 map("n", "<localleader>W", "<cmd>ClearShadaMarks<cr>", { desc = "Wipe Shada Marks" })
