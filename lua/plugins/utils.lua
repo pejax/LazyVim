@@ -11,6 +11,6 @@ return {
 
   -- Open macOS Dash app
   {
-    "rizzati/dash.vim",
+    "rizzatti/dash.vim",
   },
 }
