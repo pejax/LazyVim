@@ -65,9 +65,9 @@ local wk = require("which-key")
 wk.register({
   a = {
     name = "apps",
-    c = { "<cmd> lua require('plugins.apps').colorpicker()<cr>", "Color Picker" },
-    d = { "<cmd> lua require('plugins.apps').git_difftool()<cr>", "Git Difftool" },
-    m = { "<cmd> lua require('plugins.apps').sublime_merge()<cr>", "Sublime Merge" },
-    t = { "<cmd> lua require('plugins.apps').sublime_text()<cr>", "Sublime Text" },
+    c = { "<cmd> lua require('config.apps').colorpicker()<cr>", "Color Picker" },
+    d = { "<cmd> lua require('config.apps').git_difftool()<cr>", "Git Difftool" },
+    m = { "<cmd> lua require('config.apps').sublime_merge()<cr>", "Sublime Merge" },
+    t = { "<cmd> lua require('config.apps').sublime_text()<cr>", "Sublime Text" },
   },
 }, { prefix = "<localleader>" })
