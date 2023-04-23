@@ -57,3 +57,15 @@ map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown
 -- Dash
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
+
+-- Launch Apps
+local wk = require("which-key")
+wk.register({
+  a = {
+    name = "apps",
+    c = { "<cmd> lua require('plugins.apps').colorpicker()<cr>", "Color Picker" },
+    d = { "<cmd> lua require('plugins.apps').git_difftool()<cr>", "Git Difftool" },
+    m = { "<cmd> lua require('plugins.apps').sublime_merge()<cr>", "Sublime Merge" },
+    t = { "<cmd> lua require('plugins.apps').sublime_text()<cr>", "Sublime Text" },
+  },
+}, { prefix = "<localleader>" })
