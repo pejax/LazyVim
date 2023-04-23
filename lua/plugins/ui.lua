@@ -11,7 +11,7 @@ return {
     enabled = false,
   },
   {
-    "catppuccin/nvim",
+    "jaeheonji/catppuccin-nvim",
     enabled = false,
   },
 
