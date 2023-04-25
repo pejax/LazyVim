@@ -35,4 +35,9 @@ return {
       }
     end,
   },
+
+  -- AppleScript syntax coloring
+  {
+    "dearrrfish/vim-applescript",
+  },
 }
