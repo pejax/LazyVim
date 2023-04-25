@@ -63,8 +63,10 @@ return {
       ensure_installed = {
         "bash",
         "html",
+        "java",
         "javascript",
         "json",
+        "kotlin",
         "lua",
         "markdown",
         "markdown_inline",
