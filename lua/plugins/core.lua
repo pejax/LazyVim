@@ -32,7 +32,9 @@ return {
         items = {
           new_section("aliases",      "e $HOME/.aliases",     "Dotfiles"),
           new_section("environment",  "e $HOME/.environment", "Dotfiles"),
+          new_section("functions",    "e $HOME/.functions",   "Dotfiles"),
           new_section("motd",         "e $HOME/.motd",        "Dotfiles"),
+          new_section("projects",     "e $HOME/.projects",        "Dotfiles"),
           new_section("shellrc",      "e $HOME/.shellrc",     "Dotfiles"),
           new_section("vimrc",        "e $HOME/.vimrc",       "Dotfiles"),
           new_section("zshrc",        "e $HOME/.zshrc",       "Dotfiles"),
