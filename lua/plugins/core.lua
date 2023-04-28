@@ -3,6 +3,10 @@
 -- "echasnovski/mini.starter (Mini Starter)
 -- "nvim-treesitter/nvim-treesitter" (Treesitter)
 
+local diag_format = function(d)
+  return string.format("(%s) %s", d.code, d.message)
+end
+
 return {
   -- Use mini.starter instead of alpha
   { import = "lazyvim.plugins.extras.ui.mini-starter" },
@@ -80,6 +84,18 @@ return {
         "typescript",
         "vim",
         "yaml",
+      },
+    },
+  },
+
+  -- Format diagnostic message to display shellcheck error code [SCxxxx]
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        virtual_text = {
+          format = diag_format,
+        },
       },
     },
   },
