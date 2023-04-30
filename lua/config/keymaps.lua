@@ -71,3 +71,6 @@ wk.register({
     t = { "<cmd> lua require('config.apps').sublime_text()<cr>", "Sublime Text" },
   },
 }, { prefix = "<localleader>" })
+
+-- Read Shell Template with optargs
+map("n", "<localleader>t", ":0r ${DOTFILES}/shell/template.sh<cr>:set filetype=sh<cr>", { desc = "Shell Template" })
