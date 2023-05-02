@@ -63,6 +63,13 @@ map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global S
 -- Launch Apps
 local wk = require("which-key")
 wk.register({
+  e = {
+    name = "editor",
+    c = { ":'a,'b co .<cr>", "Copy Range a-b" },
+    m = { ":'a,'b m .<cr>", "Move Range a-b" },
+    r = { ":'a,'b s//gI<left><left><left>", "Replace Range a-b" },
+    s = { ":%s//gI<left><left><left>", "Replace globally" },
+  },
   a = {
     name = "apps",
     c = { "<cmd> lua require('config.apps').colorpicker()<cr>", "Color Picker" },
