@@ -29,9 +29,6 @@ end
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
 
--- Disable builtin colorscheme picker
---vim.keymap.del("", "<leader>uC")
-
 map("n", "<leader>?", "<cmd>Telescope help_tags<cr>", { desc = "Help Pages" })
 
 -- Wipe registers
@@ -46,9 +43,8 @@ map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String un
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
--- Colorschem Picker
-map("n", "<F2>", ":ColorSchemePick<cr>")
-map("n", "<localleader>c", ":ColorSchemePick<cr>", { desc = "Color Scheme Picker" })
+-- Overwrite builtin colorscheme picker
+map("n", "<leader>uC", ":ColorSchemePick<cr>")
 
 -- Python JSON Formatter
 map("n", "<localleader>j", ":%!python3 -m json.tool<cr>", { desc = "Format JSON" })
