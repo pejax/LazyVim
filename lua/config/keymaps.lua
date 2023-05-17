@@ -43,8 +43,8 @@ map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String un
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
--- Overwrite builtin colorscheme picker
-map("n", "<leader>uC", ":ColorSchemePick<cr>")
+-- Add own Colorscheme picker
+map("n", "<leader>uo", ":ColorSchemePick<cr>", { desc = "Colorscheme Picker (persistent)" })
 
 -- Python JSON Formatter
 map("n", "<localleader>j", ":%!python3 -m json.tool<cr>", { desc = "Format JSON" })
