@@ -43,9 +43,6 @@ map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String un
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
--- Add own Colorscheme picker
-map("n", "<leader>uo", ":ColorSchemePick<cr>", { desc = "Colorscheme Picker (persistent)" })
-
 -- Python JSON Formatter
 map("n", "<localleader>j", ":%!python3 -m json.tool<cr>", { desc = "Format JSON" })
 
@@ -56,8 +53,20 @@ map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
 
--- Launch Apps
 local wk = require("which-key")
+
+-- ColorScheme Pickers
+vim.keymap.del("", "<leader>uC")
+wk.register({
+  uC = {
+    name = "colorscheme",
+    c = { ":ColorSchemePick<cr>", "ColorScheme Picker" },
+    l = { Util.telescope("colorscheme", { enable_preview = true }), "LazyVim ColorScheme Picker" },
+    p = { ":ColorSchemePersist<cr>", "Persist ColorScheme" },
+  },
+}, { prefix = "<leader>" })
+
+-- Editor macros, Launch Apps
 wk.register({
   e = {
     name = "editor",
