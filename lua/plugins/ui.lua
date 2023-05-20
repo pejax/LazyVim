@@ -26,7 +26,7 @@ return {
     "pejax/colorscheme-persist.nvim",
     url = "git@github.com:pejax/colorscheme-persist.nvim",
     opts = {
-      env_file = ".env-overrides",
+      env_colorscheme = ".nvim-colorscheme",
     },
   },
 
