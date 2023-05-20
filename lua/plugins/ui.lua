@@ -25,9 +25,6 @@ return {
   {
     "pejax/colorscheme-persist.nvim",
     url = "git@github.com:pejax/colorscheme-persist.nvim",
-    opts = {
-      env_colorscheme = ".nvim-colorscheme",
-    },
   },
 
   -- Configure LazyVim to load colorscheme from NVIM_COLORSCHEME environment variable
