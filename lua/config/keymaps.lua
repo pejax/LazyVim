@@ -31,6 +31,9 @@ vim.keymap.del("", "<S-l>")
 
 map("n", "<leader>?", "<cmd>Telescope help_tags<cr>", { desc = "Help Pages" })
 
+-- Colorscheme Persist
+map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme" })
+
 -- Wipe registers
 map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
 map("n", "<localleader>W", "<cmd>ClearShadaMarks<cr>", { desc = "Wipe Shada Marks" })
@@ -53,20 +56,8 @@ map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
 
-local wk = require("which-key")
-
--- ColorScheme Pickers
-vim.keymap.del("", "<leader>uC")
-wk.register({
-  uC = {
-    name = "colorscheme",
-    c = { ":ColorSchemePick<cr>", "ColorScheme Picker" },
-    l = { Util.telescope("colorscheme", { enable_preview = true }), "LazyVim ColorScheme Picker" },
-    p = { ":ColorSchemePersist<cr>", "Persist ColorScheme" },
-  },
-}, { prefix = "<leader>" })
-
 -- Editor macros, Launch Apps
+local wk = require("which-key")
 wk.register({
   e = {
     name = "editor",

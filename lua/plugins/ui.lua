@@ -1,7 +1,7 @@
 -- User Interface Plugins
 
 -- "pejax/vim-colorschemes" (Vim colorschemes)
--- "pejax/colorscheme-picker.nvim" (Colorscheme Picker)
+-- "pejax/colorscheme-persist.nvim" (Colorscheme persistence)
 -- "LazyVim/LazyVim" (Load colorscheme)
 
 return {
@@ -21,14 +21,12 @@ return {
     url = "git@github.com:pejax/vim-colorschemes",
   },
 
-  -- Add Color Picker
+  -- Add Color Picker persistence
   {
-    "pejax/colorscheme-picker.nvim",
-    url = "git@github.com:pejax/colorscheme-picker.nvim",
+    "pejax/colorscheme-persist.nvim",
+    url = "git@github.com:pejax/colorscheme-persist.nvim",
     opts = {
       env_file = ".env-overrides",
-      excludes = { "delek", "morning", "peachpuff", "ron", "shine", "zellner" },
-      default_key_map = false,
     },
   },
 
