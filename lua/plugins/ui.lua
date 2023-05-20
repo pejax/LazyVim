@@ -30,7 +30,7 @@ return {
     },
   },
 
-  -- Configure LazyVim to load nvim_colorscheme from environment
+  -- Configure LazyVim to load colorscheme from NVIM_COLORSCHEME environment variable
   {
     "LazyVim/LazyVim",
     opts = {},
