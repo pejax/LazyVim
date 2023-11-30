@@ -26,6 +26,7 @@ opt.cursorcolumn    = true                  -- https://neovim.io/doc/user/option
 opt.directory       = os.getenv("RAMDISK")  -- https://neovim.io/doc/user/options.html#%27directory%27
 opt.encoding        = "utf8"                -- https://neovim.io/doc/user/options.html#%27encoding%27
 opt.errorbells      = false                 -- https://neovim.io/doc/user/options.html#%27errorbells%27
+opt.fixeol          = false                 -- https://neovim.io/doc/user/options.html#%27fixendofline%27
 opt.formatoptions   = "jcroqlnt"            -- tcqj
 opt.grepformat      = "%f:%l:%c:%m"
 opt.grepprg         = "rg --vimgrep"
