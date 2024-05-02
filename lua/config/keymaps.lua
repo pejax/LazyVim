@@ -56,6 +56,10 @@ map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
 
+--Flash
+map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
+map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
+
 -- Editor macros, Launch Apps
 local wk = require("which-key")
 wk.register({
