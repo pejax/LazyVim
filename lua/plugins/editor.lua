@@ -1,9 +1,24 @@
 -- Editor Plugins
 
+-- "echasnovski/mini.pairs", (Disable)
+-- "windwp/nvim-autopairs", (Replace mini.pairs)
 -- "chentoast/marks.nvim" (Marks)
 -- "ggandor/leap.nvim" (Leap)
 
 return {
+  -- Disable mini.pairs
+  {
+    "echasnovski/mini.pairs",
+    enabled = false,
+  },
+
+  -- Enable nvim-autopairs
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
+
   -- Manage marks in gutter
   {
     "chentoast/marks.nvim",
