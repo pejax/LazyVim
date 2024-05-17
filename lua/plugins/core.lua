@@ -11,7 +11,7 @@ return {
   -- Use mini.starter instead of alpha
   {
     "echasnovski/mini.starter",
-    version = "*", -- wait till new 0.7.0 release to put it back on semver
+    --version = "*", -- wait till new 0.7.0 release to put it back on semver
     event = "VimEnter",
     opts = function()
       local logo = table.concat({
