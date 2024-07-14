@@ -62,22 +62,20 @@ map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc 
 
 -- Editor macros, Launch Apps
 local wk = require("which-key")
-wk.register({
-  e = {
-    name = "editor",
-    c = { ":'a,'b co .<cr>", "Copy Range a-b" },
-    m = { ":'a,'b m .<cr>", "Move Range a-b" },
-    r = { ":'a,'b s//gI<left><left><left>", "Replace Range a-b" },
-    s = { ":%s//gI<left><left><left>", "Replace globally" },
+wk.add({
+  {
+    { "<localleader>a", group = "apps" },
+    { "<localleader>ac", "<cmd> lua require('config.apps').colorpicker()<cr>", desc = "Color Picker" },
+    { "<localleader>ad", "<cmd> lua require('config.apps').git_difftool()<cr>", desc = "Git Difftool" },
+    { "<localleader>am", "<cmd> lua require('config.apps').sublime_merge()<cr>", desc = "Sublime Merge" },
+    { "<localleader>at", "<cmd> lua require('config.apps').sublime_text()<cr>", desc = "Sublime Text" },
+    { "<localleader>e", group = "editor" },
+    { "<localleader>ec", ":'a,'b co .<cr>", desc = "Copy Range a-b" },
+    { "<localleader>em", ":'a,'b m .<cr>", desc = "Move Range a-b" },
+    { "<localleader>er", ":'a,'b s//gI<left><left><left>", desc = "Replace Range a-b" },
+    { "<localleader>es", ":%s//gI<left><left><left>", desc = "Replace globally" },
   },
-  a = {
-    name = "apps",
-    c = { "<cmd> lua require('config.apps').colorpicker()<cr>", "Color Picker" },
-    d = { "<cmd> lua require('config.apps').git_difftool()<cr>", "Git Difftool" },
-    m = { "<cmd> lua require('config.apps').sublime_merge()<cr>", "Sublime Merge" },
-    t = { "<cmd> lua require('config.apps').sublime_text()<cr>", "Sublime Text" },
-  },
-}, { prefix = "<localleader>" })
+})
 
 -- Read Shell Template with optargs
 map("n", "<localleader>t", ":0r ${DOTFILES}/shell/template.sh<cr>:set filetype=sh<cr>", { desc = "Shell Template" })
