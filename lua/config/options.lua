@@ -40,11 +40,6 @@ else
   opt.guifont = "FiraMono Nerd Font Mono,MesloLGS NF:h8" --https://neovim.io/doc/user/options.html#%27guifont%27
 end
 
-if vim.fn.has("nvim-0.9.0") == 1 then
-  opt.splitkeep = "screen"
-  opt.shortmess:append({ C = true })
-end
-
 -- Disable autoformat
 vim.g.autoformat = false
 -- Fix markdown indentation settings
