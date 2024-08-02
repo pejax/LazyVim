@@ -25,7 +25,7 @@ vim.cmd([[
   endfunction
 
   autocmd BufWritePre * :call TrimWhitespace()
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  autocmd FileType * setlocal formatoptions-=a formatoptions-=c formatoptions-=r formatoptions-=o
 
   " Clear marks from shada file
   function! ClearShadaMarks()
