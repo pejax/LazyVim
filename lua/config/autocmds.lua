@@ -13,7 +13,7 @@
 
 -- Fix WSV file handling (keep BOM, do not mess with EOL)
 vim.api.nvim_create_autocmd(
-  {"BufEnter"},
+  {"BufWinEnter","BufWritePost"},
   {
     pattern = {"*.wsv"},
     command = "set bomb | set noeol | set nofixeol"
