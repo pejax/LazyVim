@@ -36,14 +36,5 @@ vim.cmd([[
   autocmd BufWritePre * :call TrimWhitespace()
   autocmd FileType * setlocal formatoptions-=a formatoptions-=c formatoptions-=r formatoptions-=o
 
-  " Clear marks from shada file
-  function! ClearShadaMarks()
-    if &filetype == 'shada'
-      g/^Global mark/d6
-      g/^Local mark/d6
-    endif
-  endfunction
-
-  command! ClearShadaMarks :call ClearShadaMarks()
   command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
 ]])
