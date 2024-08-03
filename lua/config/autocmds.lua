@@ -11,6 +11,14 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
+-- Fix WSV file handling (keep BOM, do not mess with EOL)
+vim.api.nvim_create_autocmd(
+  {"BufEnter"},
+  { pattern= {"*.wsv"},
+    command = "setlocal bomb | setlocal noeol | setlocal nofixeol"
+  }
+)
+
 vim.cmd([[
   " Disable EditorConfig from removing trailing spaces
   let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
