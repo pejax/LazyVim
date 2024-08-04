@@ -28,19 +28,20 @@ end
 -- What a stupid idea to map core neovim motion keys
 vim.keymap.del("", "<S-h>")
 vim.keymap.del("", "<S-l>")
+-- Same for Flash
+vim.keymap.del("", "s")
+vim.keymap.del("", "S")
+vim.keymap.del("", "r")
+vim.keymap.del("", "R")
 
+-- Telescope
 map("n", "<leader>?", "<cmd>Telescope help_tags<cr>", { desc = "Help Pages" })
-
--- Colorscheme Persist
-map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme" })
+map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
 
 -- Wipe registers
 map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
-map("n", "<localleader>W", "<cmd>ClearShadaMarks<cr>", { desc = "Wipe Shada Marks" })
+map("n", "<localleader>W", "<cmd>delmarks!<cr>", { desc = "Wipe Shada Marks" })
 map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
-
--- Telescope
-map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
 
 -- Mini Starter
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
@@ -52,13 +53,16 @@ map("n", "<localleader>j", ":%!python3 -m json.tool<cr>", { desc = "Format JSON"
 -- Markdown Preview
 map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
 
+--Flash
+map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
+map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
+
 -- Dash
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
 
---Flash
-map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
-map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
+-- Colorscheme Persist
+map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme" })
 
 -- Editor macros, Launch Apps
 local wk = require("which-key")
