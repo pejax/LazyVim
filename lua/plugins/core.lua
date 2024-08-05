@@ -2,6 +2,7 @@
 
 -- "echasnovski/mini.starter (Mini Starter)
 -- "nvim-treesitter/nvim-treesitter" (Treesitter)
+-- "neovim/nvim-lspconfig"
 
 local diag_format = function(d)
   return string.format("(%s) %s", d.code, d.message)
