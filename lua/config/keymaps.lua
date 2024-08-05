@@ -38,24 +38,21 @@ vim.keymap.del("", "R")
 map("n", "<leader>?", "<cmd>Telescope help_tags<cr>", { desc = "Help Pages" })
 map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
 
--- Wipe registers
-map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
-map("n", "<localleader>W", "<cmd>delmarks!<cr>", { desc = "Wipe Shada Marks" })
-map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
+--Flash
+map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
+map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
 
 -- Mini Starter
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
 map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
 
--- Python JSON Formatter
-map("n", "<localleader>j", ":%!python3 -m json.tool<cr>", { desc = "Format JSON" })
+-- Wipe registers
+map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
+map("n", "<localleader>W", "<cmd>delmarks!<cr>", { desc = "Wipe Shada Marks" })
+map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
 
 -- Markdown Preview
 map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
-
---Flash
-map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
-map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
 
 -- Dash
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
