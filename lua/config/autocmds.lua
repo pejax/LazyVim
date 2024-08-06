@@ -21,10 +21,18 @@ vim.api.nvim_create_autocmd(
 )
 
 vim.cmd([[
-  " Disable EditorConfig from removing trailing spaces
-  let g:EditorConfig_disable_rules = ['trim_trailing_whitespace']
+  " Replace markdown trailing spaces
+  function! ReplaceTrailingWhitespace()
+    if (&filetype == 'markdown')
+      let l:save = winsaveview()
+      %s/\s\+$/<\/br>/e
+      call winrestview(l:save)
+    endif
+  endfunction
+  autocmd BufReadPost * :call ReplaceTrailingWhitespace()
 
   autocmd FileType * setlocal formatoptions-=a formatoptions-=c formatoptions-=r formatoptions-=o
 
   command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+  command! FixMarkdown call ReplaceTrailingWhitespace()
 ]])

@@ -53,6 +53,7 @@ map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
 
 -- Markdown Preview
 map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
+map("n", "<localleader>M", "<cmd>FixMarkdown<cr>", { desc = "Fix Markdown trailing spaces" })
 
 -- Dash
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
