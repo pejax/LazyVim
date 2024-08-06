@@ -22,8 +22,6 @@ vim.cmd([[
   endfunction
   autocmd BufReadPost * :call ReplaceTrailingWhitespace()
 
-  autocmd FileType * setlocal formatoptions-=a formatoptions-=c formatoptions-=r formatoptions-=o
-
   command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
   command! FixMarkdown call ReplaceTrailingWhitespace()
 ]])
