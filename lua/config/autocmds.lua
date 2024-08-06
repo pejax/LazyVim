@@ -11,17 +11,8 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
--- Fix WSV file handling (keep BOM, do not mess with EOL)
-vim.api.nvim_create_autocmd(
-  {"BufWinEnter","BufWritePost"},
-  {
-    pattern = {"*.wsv"},
-    command = "set bomb | set noeol | set nofixeol"
-  }
-)
-
 vim.cmd([[
-  " Replace markdown trailing spaces
+  " Replace Markdown trailing spaces
   function! ReplaceTrailingWhitespace()
     if (&filetype == 'markdown')
       let l:save = winsaveview()
