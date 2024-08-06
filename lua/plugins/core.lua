@@ -36,6 +36,7 @@ return {
         items = {
           new_section("aliases",      "e $HOME/.aliases",               "Dotfiles"),
           new_section("dialog",       "e $HOME/.dialog",                "Dotfiles"),
+          new_section("editorconfig", "e $HOME/.editorconfig",          "Dotfiles"),
           new_section("environment",  "e $HOME/.environment",           "Dotfiles"),
           new_section("functions",    "e $HOME/.functions",             "Dotfiles"),
           new_section("motd",         "e $HOME/.motd",                  "Dotfiles"),
