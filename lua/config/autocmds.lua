@@ -12,16 +12,18 @@
 -- Add any additional autocmds here
 
 vim.cmd([[
-  " Replace Markdown trailing spaces
+
   function! ReplaceTrailingWhitespace()
+    " Replace trailing spaces with </br>
     if (&filetype == 'markdown')
       let l:save = winsaveview()
       %s/\s\+$/<\/br>/e
       call winrestview(l:save)
     endif
   endfunction
-  autocmd BufReadPost * :call ReplaceTrailingWhitespace()
+
+  command! FixMarkdown call ReplaceTrailingWhitespace()
 
   command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-  command! FixMarkdown call ReplaceTrailingWhitespace()
+
 ]])
