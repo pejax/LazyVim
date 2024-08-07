@@ -17,7 +17,6 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
 })
 
 vim.cmd([[
-
   function! ReplaceTrailingWhitespace()
     " Replace trailing spaces with </br>
     if (&filetype == 'markdown')
@@ -30,5 +29,4 @@ vim.cmd([[
   command! FixMarkdown call ReplaceTrailingWhitespace()
 
   command! WipeRegs for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
-
 ]])
