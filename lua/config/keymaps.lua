@@ -51,10 +51,6 @@ map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })
 map("n", "<localleader>W", "<cmd>delmarks!<cr>", { desc = "Wipe Shada Marks" })
 map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
 
--- Markdown Preview
-map("n", "<localleader>m", "<Plug>MarkdownPreviewToggle<cr>", { desc = "Markdown Preview" })
-map("n", "<localleader>M", "<cmd>FixMarkdown<cr>", { desc = "Fix Markdown trailing spaces" })
-
 -- Dash
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
@@ -66,16 +62,19 @@ map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme"
 local wk = require("which-key")
 wk.add({
   {
-    { "<localleader>a", group = "apps" },
-    { "<localleader>ac", "<cmd> lua require('config.apps').colorpicker()<cr>", desc = "Color Picker" },
-    { "<localleader>ad", "<cmd> lua require('config.apps').git_difftool()<cr>", desc = "Git Difftool" },
-    { "<localleader>am", "<cmd> lua require('config.apps').sublime_merge()<cr>", desc = "Sublime Merge" },
-    { "<localleader>at", "<cmd> lua require('config.apps').sublime_text()<cr>", desc = "Sublime Text" },
     { "<localleader>e", group = "editor" },
     { "<localleader>ec", ":'a,'b co .<cr>", desc = "Copy Range a-b" },
     { "<localleader>em", ":'a,'b m .<cr>", desc = "Move Range a-b" },
     { "<localleader>er", ":'a,'b s//gI<left><left><left>", desc = "Replace Range a-b" },
     { "<localleader>es", ":%s//gI<left><left><left>", desc = "Replace globally" },
+    { "<localleader>m", group = "markdown" },
+    { "<localleader>mp", "<Plug>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" },
+    { "<localleader>mf", "<cmd>FixMarkdown<cr>", desc = "Fix Markdown trailing spaces" },
+    { "<localleader>a", group = "apps" },
+    { "<localleader>ac", "<cmd> lua require('config.apps').colorpicker()<cr>", desc = "Color Picker" },
+    { "<localleader>ad", "<cmd> lua require('config.apps').git_difftool()<cr>", desc = "Git Difftool" },
+    { "<localleader>am", "<cmd> lua require('config.apps').sublime_merge()<cr>", desc = "Sublime Merge" },
+    { "<localleader>at", "<cmd> lua require('config.apps').sublime_text()<cr>", desc = "Sublime Text" },
   },
 })
 
