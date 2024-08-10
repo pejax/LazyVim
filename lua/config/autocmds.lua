@@ -11,9 +11,30 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
-vim.api.nvim_create_autocmd({"BufEnter"}, {
-  pattern = {"*.wsv"},
-  command = "set filetype=wsv"
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*.wsv" },
+  callback = function()
+    vim.opt.filetype = "wsv"
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*.md" },
+  callback = function()
+    local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+    local hits = 0
+    for _, line in ipairs(lines) do
+      if string.match(line, " + +$") then
+        hits = hits + 1
+      end
+    end
+    if hits > 0 then
+	    --local yes_no = vim.fn.input(hits .. " lines with trailing double spaces found - replace with </br>? [Y/n]: ")
+	    --if yes_no ~= "" and yes_no ~= "y" and yes_no ~= "Y" then
+      --end
+	    vim.notify(hits .. " lines with trailing double spaces found", "warn")
+    end
+  end,
 })
 
 vim.cmd([[
