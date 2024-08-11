@@ -18,8 +18,8 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "*.md" },
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "markdown" },
   callback = function()
     local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
     local hits = 0
@@ -30,8 +30,9 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     end
     if hits > 0 then
 	    --local yes_no = vim.fn.input(hits .. " lines with trailing double spaces found - replace with </br>? [Y/n]: ")
-	    --if yes_no ~= "" and yes_no ~= "y" and yes_no ~= "Y" then
-      --end
+	    --  if yes_no ~= "" and yes_no ~= "y" and yes_no ~= "Y" then
+      --    vim.notify("Hugo")
+      --  end
 	    vim.notify(hits .. " lines with trailing double spaces found", "warn")
     end
   end,
