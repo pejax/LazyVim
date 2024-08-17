@@ -34,6 +34,11 @@ vim.keymap.del("", "S")
 vim.keymap.del("", "r")
 vim.keymap.del("", "R")
 
+ -- General
+map("n", "<F3>", ":q!<cr>", { desc = "Quit w/o saving changes" })
+map("n", "<F4>", ":wq!<cr>", { desc = "Quit saving changes" })
+map("n", "<A-right>", ":n<cr>", { desc = "Next file" })
+
 -- Telescope
 map("n", "<leader>?", "<cmd>Telescope help_tags<cr>", { desc = "Help Pages" })
 map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String under Cursor" })
