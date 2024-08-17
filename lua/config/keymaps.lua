@@ -35,8 +35,8 @@ vim.keymap.del("", "r")
 vim.keymap.del("", "R")
 
  -- General
-map("n", "<F3>", ":q!<cr>", { desc = "Quit w/o saving changes" })
-map("n", "<F4>", ":wq!<cr>", { desc = "Quit saving changes" })
+map("n", "<F3>", ":q<cr>", { desc = "Quit w/o saving changes" })
+map("n", "<F4>", ":wq<cr>", { desc = "Quit saving changes" })
 map("n", "<A-right>", ":n<cr>", { desc = "Next file" })
 
 -- Telescope
