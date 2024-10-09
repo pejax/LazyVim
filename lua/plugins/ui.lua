@@ -35,6 +35,8 @@ return {
       local nvim_colorscheme = os.getenv("NVIM_COLORSCHEME")
       if nvim_colorscheme and nvim_colorscheme ~= "" then
         plug.opts.colorscheme = nvim_colorscheme
+      else
+        plug.opts.colorscheme = "monokai"
       end
     end,
   },
