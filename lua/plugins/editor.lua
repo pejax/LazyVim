@@ -1,24 +1,10 @@
 -- Editor Plugins
 
--- "ggandor/leap.nvim" (Dsable)
--- "echasnovski/mini.pairs", (Disable)
 -- "windwp/nvim-autopairs", (Replace mini.pairs)
--- "chentoast/marks.nvim" (Marks)
+-- "chentoast/marks.nvim", (Marks)
 -- "dearrrfish/vim-applescript.nvim"
 
 return {
-  -- Disable leap
-  {
-    "ggandor/leap.nvim",
-    enabled = false,
-  },
-
-  -- Disable mini.pairs
-  {
-    "echasnovski/mini.pairs",
-    enabled = false,
-  },
-
   -- Enable nvim-autopairs
   {
     "windwp/nvim-autopairs",

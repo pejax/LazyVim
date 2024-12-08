@@ -5,16 +5,6 @@
 -- "LazyVim/LazyVim" (Load colorscheme)
 
 return {
-  -- Disable colorschemes
-  {
-    "folke/tokyonight.nvim",
-    enabled = false,
-  },
-  {
-    "jaeheonji/catppuccin-nvim",
-    enabled = false,
-  },
-
   -- Add Colorschemes
   {
     "pejax/vim-colorschemes",
