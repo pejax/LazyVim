@@ -1,66 +1,13 @@
 -- Core Plugins
 
--- "echasnovski/mini.starter (Mini Starter)
--- "nvim-treesitter/nvim-treesitter" (Treesitter)
--- "neovim/nvim-lspconfig"
+-- nvim-treesitter/nvim-treesitter
+-- neovim/nvim-lspconfig
 
 local diag_format = function(d)
   return string.format("(%s) %s", d.code, d.message)
 end
 
 return {
-  -- Use mini.starter instead of alpha
-  {
-    "echasnovski/mini.starter",
-    --version = "*", -- wait till new 0.7.0 release to put it back on semver
-    event = "VimEnter",
-    opts = function()
-      local logo = table.concat({
-        "██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z",
-        "██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z",
-        "██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z",
-        "██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z",
-        "███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║",
-        "╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝",
-      }, "\n")
-      local pad = string.rep(" ", 22)
-      local new_section = function(name, action, section)
-        return { name = name, action = action, section = pad .. section }
-      end
-
-      local starter = require("mini.starter")
-      --stylua: ignore
-      local config = {
-        evaluate_single = true,
-        header = logo,
-        items = {
-          new_section("aliases",                "e $HOME/.aliases",               "Dotfiles"),
-          new_section("dialog",                 "e $HOME/.dialog",                "Dotfiles"),
-          new_section("editorconfig",           "e $HOME/.editorconfig",          "Dotfiles"),
-          new_section("environment",            "e $HOME/.environment",           "Dotfiles"),
-          new_section("functions",              "e $HOME/.functions",             "Dotfiles"),
-          new_section("motd",                   "e $HOME/.motd",                  "Dotfiles"),
-          new_section("navigation",             "e $HOME/.navigation",            "Dotfiles"),
-          new_section("shellrc",                "e $HOME/.shellrc",               "Dotfiles"),
-          new_section("tmux",                   "e $HOME/.config/tmux/tmux.conf", "Dotfiles"),
-          new_section("vimrc",                  "e $HOME/.vimrc",                 "Dotfiles"),
-          new_section("zshrc",                  "e $HOME/.zshrc",                 "Dotfiles"),
-          new_section("recent files",           "Telescope oldfiles",             "Telescope"),
-          new_section("grep text",              "Telescope live_grep",            "Telescope"),
-          new_section("create (insert mode)",   "ene | startinsert",              "Built-in"),
-          new_section("create (normal mode)",   "ene",                            "Built-in"),
-          new_section("lazy",                   "Lazy",                           "Built-in"),
-          new_section("quit",                   "qa",                             "Built-in"),
-        },
-        content_hooks = {
-          starter.gen_hook.adding_bullet(pad .. "░ ", false),
-          starter.gen_hook.aligning("center", "center"),
-        },
-      }
-      return config
-    end,
-  },
-
   -- For typescript, LazyVim also includes extra specs to properly setup lspconfig,
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
   { import = "lazyvim.plugins.extras.lang.typescript" },

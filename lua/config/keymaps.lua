@@ -48,7 +48,7 @@ map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc 
 
 -- Mini Starter
 map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
-map("n", "<localleader>y", "<cmd>lua require('mini.starter').open()<cr>", { desc = "Dashboard" })
+map("n", "<localleader>y", "<cmd>lua require('snacks.dashboard').open()<cr>", { desc = "Dashboard" })
 
 -- Wipe registers
 map("n", "<localleader>w", "<cmd>WipeRegs<cr>", { desc = "Wipe Registers" })

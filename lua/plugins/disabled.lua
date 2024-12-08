@@ -3,7 +3,7 @@
 -- ggandor/leap.nvim
 -- echasnovski/mini.pairs
 -- folke/tokyonight.nvim
--- jaeheonji/catppuccin-nvim
+-- catppuccin/nvim
 
 return {
   {
@@ -20,9 +20,9 @@ return {
     "folke/tokyonight.nvim",
     enabled = false,
   },
+
   {
-    "jaeheonji/catppuccin-nvim",
+    "catppuccin/nvim",
     enabled = false,
   },
-
 }
