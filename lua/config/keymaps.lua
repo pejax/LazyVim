@@ -46,8 +46,8 @@ map("n", "<leader>;", "<cmd>Telescope grep_string<cr>", { desc = "Grep String un
 map("n", "<localleader>s", "<cmd>lua require('flash').jump()<cr>", { desc = "Flash" })
 map("n", "<localleader>S", "<cmd>lua require('flash').treesitter()<cr>", { desc = "Flash Treesitter" })
 
--- Mini Starter
-map("n", "<F5>", "<cmd>lua require('mini.starter').open()<cr>")
+-- Dashboard
+map("n", "<F5>", "<cmd>lua require('snacks.dashboard').open()<cr>", { desc = "Dashboard" })
 map("n", "<localleader>y", "<cmd>lua require('snacks.dashboard').open()<cr>", { desc = "Dashboard" })
 
 -- Wipe registers
