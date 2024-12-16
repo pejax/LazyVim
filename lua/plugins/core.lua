@@ -12,6 +12,13 @@ return {
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
   { import = "lazyvim.plugins.extras.lang.typescript" },
 
+  {
+    "folke/which-key.nvim",
+    opts = {
+      preset = "modern"
+    }
+  },
+
   -- add more treesitter parsers
   {
     "nvim-treesitter/nvim-treesitter",

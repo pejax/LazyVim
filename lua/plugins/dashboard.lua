@@ -8,7 +8,7 @@ return {
           { icon = " ", key = "a", desc = ".aliases", action = ":e $HOME/.aliases" },
           { icon = " ", key = "e", desc = ".environment", action = ":e $HOME/.environment" },
           { icon = " ", key = "E", desc = ".editorconfig", action = ":e $HOME/.editorconfig" },
-          { icon = " ", key = "f", desc = ".functions", action = ":e $HOME/.functions" },
+          --{ icon = " ", key = "f", desc = ".functions", action = ":e $HOME/.functions" },
           { icon = " ", key = "n", desc = ".navigation", action = ":e $HOME/.navigation" },
           -- LazyVim configuration
           { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
