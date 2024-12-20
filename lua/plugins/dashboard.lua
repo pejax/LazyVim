@@ -9,7 +9,7 @@ return {
           { icon = " ", key = "e", desc = ".environment", action = ":e $HOME/.environment" },
           { icon = " ", key = "n", desc = ".navigation", action = ":e $HOME/.navigation" },
           -- LazyVim configuration
-          { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+          { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
           {
             icon = " ",
             key = "c",
