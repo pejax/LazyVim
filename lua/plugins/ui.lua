@@ -20,7 +20,6 @@ return {
   -- Configure LazyVim to load colorscheme from NVIM_COLORSCHEME environment variable
   {
     "LazyVim/LazyVim",
-    opts = {},
     init = function(plug)
       local nvim_colorscheme = os.getenv("NVIM_COLORSCHEME")
       if nvim_colorscheme and nvim_colorscheme ~= "" then
