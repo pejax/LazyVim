@@ -11,6 +11,17 @@ return {
     url = "git@github.com:pejax/vim-colorschemes",
   },
 
+  -- IntelliJ colorscheme
+  {
+    "vermdeep/darcula_dark.nvim",
+  },
+  {
+    "rktjmp/lush.nvim",
+    dependencies = {
+      "vermdeep/darcula_dark.nvim"
+    },
+  },
+
   -- Add Color Picker persistence
   {
     "pejax/colorscheme-persist.nvim",
@@ -21,6 +32,7 @@ return {
   {
     "LazyVim/LazyVim",
     init = function(plug)
+      --vim.cmd "set termguicolors"
       local nvim_colorscheme = os.getenv("NVIM_COLORSCHEME")
       if nvim_colorscheme and nvim_colorscheme ~= "" then
         plug.opts.colorscheme = nvim_colorscheme
