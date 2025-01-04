@@ -38,6 +38,7 @@ return {
         "regex",
         "scala",
         "tsx",
+        "toml",
         "typescript",
         "vim",
         "yaml",
