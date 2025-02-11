@@ -35,6 +35,7 @@ end
 vim.g.maplocalleader = ","
 vim.g.autoformat = false
 vim.g.autocomment = "off"
+vim.g.lazyvim_check_order = false
 
 vim.cmd([[
   hi CursorLine cterm=underline             " https://neovim.io/doc/user/usr_06.html
