@@ -13,7 +13,7 @@
 -- Add any additional options here
 
 local opt = vim.opt
-local ramdisk = os.getenv("RAMDISK")
+local ramdisk = os.getenv("TMPDIR")
 
 opt.autowrite     = false                 -- https://neovim.io/doc/user/options.html#%27autowrite%27
 opt.backup        = false                 -- https://neovim.io/doc/user/options.html#%27backup%27
