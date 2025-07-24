@@ -59,6 +59,9 @@ map("n", "<localleader>r", ":reg<cr>", { desc = "Registers" })
 map("n", "<localleader>d", "<Plug>DashSearch<cr>", { desc = "Dash Search" })
 map("n", "<localleader>D", "<Plug>DashGlobalSearch<cr>", { desc = "Dash Global Search" })
 
+-- CSV View
+map("n", "<localleader>c", ":CsvViewToggle delimiter=;<cr>", { desc = "CSV View delimiter=;" })
+
 -- Colorscheme Persist
 map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme" })
 
