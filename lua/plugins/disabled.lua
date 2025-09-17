@@ -12,7 +12,7 @@ return {
   },
 
   {
-    "echasnovski/mini.pairs",
+    "nvm-mini/mini.pairs",
     enabled = false,
   },
 
