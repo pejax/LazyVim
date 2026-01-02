@@ -77,6 +77,7 @@ wk.add({
     { "<localleader>f", group = "Filetype" },
     { "<localleader>f?", "<cmd> lua print(vim.bo.filetype)<cr>", desc = "Show filetype" },
     { "<localleader>fs", ":set filetype=sh<cr>|<cmd> lua require('config.cmds').chmod('+x')<cr>", desc = "Shell" },
+    { "<localleader>ft", ":0r ${DOTFILES}/shell/template.sh<cr>:set filetype=sh<cr>|<cmd>lua require('config.cmds').chmod('+x')<cr>", desc = "Shell Template" },
     { "<localleader>m", group = "Markdown" },
     { "<localleader>mp", "<Plug>MarkdownPreviewToggle<cr>", desc = "Preview" },
     { "<localleader>mr", "<cmd>FixMarkdown<cr>", desc = "Replace trailing spaces" },
@@ -89,4 +90,3 @@ wk.add({
 })
 
 -- Read Shell Template with optargs
-map("n", "<localleader>t", ":0r ${DOTFILES}/shell/template.sh<cr>:set filetype=sh<cr>", { desc = "Shell Template" })
