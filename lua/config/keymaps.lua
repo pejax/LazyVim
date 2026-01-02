@@ -76,6 +76,7 @@ wk.add({
     { "<localleader>es", ":%s//gI<left><left><left>", desc = "Replace globally" },
     { "<localleader>f", group = "Filetype" },
     { "<localleader>ff", "<cmd> lua print(vim.bo.filetype)<cr>", desc = "Show filetype" },
+    { "<localleader>fx", "<cmd> lua require('config.cmds').chmod()<cr>", desc = "chmod +x" },
     { "<localleader>fs", ":set filetype=sh<cr>", desc = "Set Shell" },
     { "<localleader>m", group = "Markdown" },
     { "<localleader>mp", "<Plug>MarkdownPreviewToggle<cr>", desc = "Preview" },
