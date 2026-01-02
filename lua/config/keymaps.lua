@@ -69,15 +69,18 @@ map("n", "<leader>up", ":ColorSchemePersist<cr>", { desc = "Persist Colorscheme"
 local wk = require("which-key")
 wk.add({
   {
-    { "<localleader>e", group = "editor" },
+    { "<localleader>e", group = "Editor" },
     { "<localleader>ec", ":'a,'b co .<cr>", desc = "Copy Range a-b" },
     { "<localleader>em", ":'a,'b m .<cr>", desc = "Move Range a-b" },
     { "<localleader>er", ":'a,'b s//gI<left><left><left>", desc = "Replace Range a-b" },
     { "<localleader>es", ":%s//gI<left><left><left>", desc = "Replace globally" },
-    { "<localleader>m", group = "markdown" },
+    { "<localleader>f", group = "Filetype" },
+    { "<localleader>ff", "<cmd> lua print(vim.bo.filetype)<cr>", desc = "Show filetype" },
+    { "<localleader>fs", ":set filetype=sh<cr>", desc = "Set Shell" },
+    { "<localleader>m", group = "Markdown" },
     { "<localleader>mp", "<Plug>MarkdownPreviewToggle<cr>", desc = "Preview" },
     { "<localleader>mr", "<cmd>FixMarkdown<cr>", desc = "Replace trailing spaces" },
-    { "<localleader>a", group = "apps" },
+    { "<localleader>a", group = "Apps" },
     { "<localleader>ac", "<cmd> lua require('config.apps').colorpicker()<cr>", desc = "Color Picker" },
     { "<localleader>ad", "<cmd> lua require('config.apps').git_difftool()<cr>", desc = "Git Difftool" },
     { "<localleader>am", "<cmd> lua require('config.apps').sublime_merge()<cr>", desc = "Sublime Merge" },
