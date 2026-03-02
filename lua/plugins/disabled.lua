@@ -1,13 +1,13 @@
 -- Disabled plugins
 
--- ggandor/leap.nvim
+-- codeberg.org/andyg/leap.nvim
 -- echasnovski/mini.pairs
 -- folke/tokyonight.nvim
 -- catppuccin/nvim
 
 return {
   {
-    "ggandor/leap.nvim",
+    "codeberg.org/andyg/leap.nvim",
     enabled = false,
   },
 
