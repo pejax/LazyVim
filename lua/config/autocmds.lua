@@ -18,6 +18,13 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*.json" },
+  callback = function()
+    vim.opt.filetype = "json"
+  end,
+})
+
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "markdown" },
   callback = function()
